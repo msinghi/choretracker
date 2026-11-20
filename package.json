@@ -1,8 +1,8 @@
 {
-  "name": "rohan-kavya-chore-tracker",
+  "name": "family-chore-tracker",
   "version": "1.0.0",
   "private": true,
-  "description": "Family chore tracker, point wallet, rewards redemption, and money trend graph for Rohan & Kavya",
+  "description": "Serverless family chore tracker, point wallet, rewards redemption, and money trend graph backed by Google Sheets",
   "scripts": {
     "build": "vite build",
     "start": "vite build && node --experimental-sqlite --no-warnings=ExperimentalWarning server/index.js",

@@ -454,8 +454,8 @@ async function ensureSheetStateLoaded(forceRefresh = false) {
     let demo = loadDemoDb();
     if (!demo) {
       demo = initDemoFamily([
-        { name: 'Rohan', color: 'indigo', avatar: '🚀' },
-        { name: 'Kavya', color: 'rose', avatar: '🌟' }
+        { name: 'Kid 1', color: 'indigo', avatar: '🚀' },
+        { name: 'Kid 2', color: 'rose', avatar: '🌟' }
       ]);
     }
     return { ...demo, spreadsheetUrl: null, isDemo: true };

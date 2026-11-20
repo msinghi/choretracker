@@ -488,7 +488,7 @@ export default function DailyLogger({
           </div>
         </>
       ) : (
-        /* Single Kid View (when logged in as Rohan or Kavya) */
+        /* Single Kid View */
         <div>{kids[0] && renderKidChecklist(kids[0])}</div>
       )}
     </div>

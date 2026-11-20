@@ -22,8 +22,7 @@ export default function FamilyOnboardingWizard({ auth, onComplete, onSignOut }) 
 
   const [sheetTitle, setSheetTitle] = useState(defaultSheetTitle);
   const [kids, setKids] = useState([
-    { name: 'Rohan', avatar: '🚀', color: 'indigo' },
-    { name: 'Kavya', avatar: '🌟', color: 'rose' }
+    { name: '', avatar: '🚀', color: 'indigo' }
   ]);
   const [creating, setCreating] = useState(false);
   const [error, setError] = useState('');
@@ -172,9 +171,10 @@ export default function FamilyOnboardingWizard({ auth, onComplete, onSignOut }) 
 
                   <input
                     type="text"
-                    placeholder={`Kid #${idx + 1} Name`}
+                    placeholder={`Enter Kid #${idx + 1}'s Name`}
                     value={kid.name}
                     onChange={(e) => updateKid(idx, { name: e.target.value })}
+                    autoFocus={idx === 0}
                     className="flex-1 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     required
                   />
@@ -205,6 +205,15 @@ export default function FamilyOnboardingWizard({ auth, onComplete, onSignOut }) 
                 </div>
               </div>
             ))}
+
+            <button
+              type="button"
+              onClick={addKidSlot}
+              className="w-full inline-flex items-center justify-center gap-1.5 rounded-xl border border-dashed border-slate-300 bg-white py-2.5 text-xs font-bold text-indigo-600 hover:border-indigo-400 hover:bg-indigo-50/40 transition cursor-pointer"
+            >
+              <Plus className="w-4 h-4" />
+              Add Another Kid
+            </button>
           </div>
 
           <button
