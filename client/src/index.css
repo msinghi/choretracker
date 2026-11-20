@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer base {
+  button, a, input, select {
+    touch-action: manipulation;
+  }
+}
+
+/* Safe area padding for iOS Home Screen web apps */
+.pb-safe {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
